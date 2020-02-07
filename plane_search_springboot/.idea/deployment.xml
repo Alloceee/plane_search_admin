@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="PublishConfigData" serverName="home2">
+  <component name="PublishConfigData" serverName="tengxun">
     <serverData>
+      <paths name="a">
+        <serverdata>
+          <mappings>
+            <mapping local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
       <paths name="home">
         <serverdata>
           <mappings>
@@ -9,7 +16,7 @@
           </mappings>
         </serverdata>
       </paths>
-      <paths name="home2">
+      <paths name="tengxun">
         <serverdata>
           <mappings>
             <mapping deploy="/" local="$PROJECT_DIR$" web="/" />

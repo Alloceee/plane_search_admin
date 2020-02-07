@@ -10,7 +10,7 @@
           <option name="port" value="22" />
         </fileTransfer>
       </webServer>
-      <webServer id="dce1b722-db8b-4390-812c-cd3098af50d6" name="home2" url="http://172.81.211.97">
+      <webServer id="dce1b722-db8b-4390-812c-cd3098af50d6" name="tengxun" url="http://172.81.211.97">
         <fileTransfer host="172.81.211.97" port="22" rootFolder="/var/opt" accessType="SFTP">
           <advancedOptions>
             <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
