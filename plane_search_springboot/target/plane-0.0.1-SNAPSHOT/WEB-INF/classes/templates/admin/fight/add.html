@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <title>航班信息上传界面</title>
+    <link rel="stylesheet" href="/plugins/layui/css/layui.css">
+    <link rel="stylesheet" id="css-main" href="/css/oneui.css">
+</head>
+<body>
+<div id="page-container" class="sidebar-l sidebar-o side-scroll header-navbar-fixed">
+    <div th:replace="/admin/comm/nav :: nav"></div>
+
+    <div th:replace="/admin/comm/header :: header"></div>
+
+    <main id="main-container">
+        <!-- Page Header -->
+        <div class="content bg-gray-lighter">
+            <h1 class="page-heading push">
+                航班管理<small>添加航班信息</small>
+            </h1>
+        </div>
+        <!-- END Page Header -->
+
+        <!-- Page Content -->
+        <div class="content content-boxed">
+            <!-- Demo Content -->
+            <div class="block block-rounded">
+                <div class="block-content block-content-full block-content-narrow">
+                    <div class="push-30 push-30-t">
+                        <form class="form-horizontal" method="post"
+                              onsubmit="return false;">
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="company">航班公司</label>
+                                <div class="col-md-7">
+                                    <select id="company" class="form-control">
+                                        <option> -- 请选择航空公司 --</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="number">客机型号</label>
+                                <div class="col-md-7">
+                                    <select id="number" name="planeId" class="form-control"></select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label">航班类型</label>
+                                <div class="col-md-7">
+                                    <label class="css-input css-radio css-radio-primary push-10-r">
+                                        <input type="radio" value="0" name="type" checked=""><span></span>国内航班
+                                    </label>
+                                    <label class="css-input css-radio css-radio-primary">
+                                        <input type="radio" value="1" name="type"><span></span>国外航班
+                                    </label>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="start_city">始发地</label>
+                                <div class="col-md-3">
+                                    <input class="form-control" type="text" id="start_city"
+                                           name="startCity" placeholder="出发城市">
+                                </div>
+                                <div class="col-md-3">
+                                    <input class="form-control" type="text"
+                                           name="startAirport" placeholder="机场">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="end_city">目的地</label>
+                                <div class="col-md-3">
+                                    <input class="form-control" type="text" id="end_city"
+                                           name="endCity" placeholder="抵达城市">
+                                </div>
+                                <div class="col-md-3">
+                                    <input class="form-control" type="text"
+                                           name="endAirport" placeholder="机场">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="time">时间范围</label>
+                                <div class="col-md-7">
+                                    <input type="text" class="form-control" id="time" name="time"
+                                           placeholder=" - ">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-md-3 control-label" for="price">价格</label>
+                                <div class="col-md-7">
+                                    <div class="input-group">
+                                        <input class="form-control" type="text" id="price"
+                                               name="price"
+                                               placeholder="价格">
+                                        <span class="input-group-addon"><i class="fa fa-rmb"></i></span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-md-9 col-md-offset-3">
+                                    <button class="btn btn-minw btn-rounded btn-info" type="submit">上传</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+            <!-- END Demo Content -->
+        </div>
+        <!-- END Page Content -->
+    </main>
+    <!-- END Main Container -->
+
+    <div th:replace="/admin/comm/footer :: footer"></div>
+</div>
+<!-- END Page Container -->
+<!-- 基础js应用 -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.scrollLock.min.js"></script>
+<script src="/js/jquery.appear.min.js"></script>
+<script src="/js/jquery.countTo.min.js"></script>
+<script src="/js/jquery.placeholder.min.js"></script>
+<script src="/js/js.cookie.min.js"></script>
+<script src="/js/jquery.slimscroll.min.js"></script>
+<script src="/js/app.js"></script>
+
+<!-- 插件js应用 -->
+<script src="/plugins/layui/layui.js"></script>
+
+<!-- 页面js -->
+<script src="/base/base_fight_add.js"></script>
+</body>
+</html>

@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Sidebar -->
+<nav id="sidebar" th:fragment="nav">
+    <!-- Sidebar Scroll Container -->
+    <div id="sidebar-scroll">
+        <!-- Sidebar Content -->
+        <!-- Adding .sidebar-mini-hide to an element will hide it when the sidebar is in mini mode -->
+        <div class="sidebar-content">
+            <!-- Side Header -->
+            <div class="side-header side-content bg-white-op">
+                <!-- Layout API, functionality initialized in App() -> uiLayoutApi() -->
+                <button class="btn btn-link text-gray pull-right hidden-md hidden-lg" type="button" data-toggle="layout"
+                        data-action="sidebar_close">
+                    <i class="fa fa-times"></i>
+                </button>
+                <!-- Themes functionality initialized in App() -> uiHandleTheme() -->
+                <div class="btn-group pull-right">
+                    <button class="btn btn-link text-gray dropdown-toggle" data-toggle="dropdown" type="button">
+                        <i class="si si-drop"></i>
+                    </button>
+                    <ul class="dropdown-menu dropdown-menu-right font-s13 sidebar-mini-hide">
+                        <li>
+                            <a data-toggle="theme" data-theme="default" tabindex="-1" href="javascript:void(0)">
+                                <i class="fa fa-circle text-default pull-right"></i> <span
+                                    class="font-w600">Default</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="theme" data-theme="assets/css/themes/amethyst.min.css" tabindex="-1"
+                               href="javascript:void(0)">
+                                <i class="fa fa-circle text-amethyst pull-right"></i> <span
+                                    class="font-w600">Amethyst</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="theme" data-theme="assets/css/themes/city.min.css" tabindex="-1"
+                               href="javascript:void(0)">
+                                <i class="fa fa-circle text-city pull-right"></i> <span class="font-w600">City</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="theme" data-theme="assets/css/themes/flat.min.css" tabindex="-1"
+                               href="javascript:void(0)">
+                                <i class="fa fa-circle text-flat pull-right"></i> <span class="font-w600">Flat</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="theme" data-theme="assets/css/themes/modern.min.css" tabindex="-1"
+                               href="javascript:void(0)">
+                                <i class="fa fa-circle text-modern pull-right"></i> <span
+                                    class="font-w600">Modern</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a data-toggle="theme" data-theme="assets/css/themes/smooth.min.css" tabindex="-1"
+                               href="javascript:void(0)">
+                                <i class="fa fa-circle text-smooth pull-right"></i> <span
+                                    class="font-w600">Smooth</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a class="h5 text-white" href="index.html">
+                    <i class="fa fa-circle-o-notch text-primary"></i> <span
+                        class="h4 font-w600 sidebar-mini-hide">ne</span>
+                </a>
+            </div>
+            <!-- END Side Header -->
+
+            <!-- Side Content -->
+            <div class="side-content">
+                <ul class="nav-main">
+                    <li>
+                        <a href="/admin/index"><i class="si si-speedometer"></i><span
+                                class="sidebar-mini-hide">首页</span></a>
+                    </li>
+                    <li class="nav-main-heading"><span class="sidebar-mini-hide">航班信息管理</span></li>
+                    <li>
+                        <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-badge"></i><span
+                                class="sidebar-mini-hide">航班管理</span></a>
+                        <ul>
+                            <li>
+                                <a href="/admin/fight/add">上传信息</a>
+                            </li>
+                            <li>
+                                <a href="/admin/fight/show">批量文件上传</a>
+                            </li>
+                            <li>
+                                <a href="/admin/chinaFight/show">查看国内航班</a>
+                            </li>
+                            <li>
+                                <a href="/admin/abroadFight/show">查看国外航班</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-grid"></i><span
+                                class="sidebar-mini-hide">航班公司管理</span></a>
+                        <ul>
+                            <li>
+                                <a href="/admin/company/add">添加公司</a>
+                            </li>
+                            <li>
+                                <a href="/admin/company/import">批量文件上传</a>
+                            </li>
+                            <li>
+                                <a href="/admin/company/show">查看公司</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-grid"></i><span
+                                class="sidebar-mini-hide">航班客机管理</span></a>
+                        <ul>
+                            <li>
+                                <a href="/admin/plane/add">添加客机</a>
+                            </li>
+                            <li>
+                                <a href="/admin/fight/show">批量文件上传</a>
+                            </li>
+                            <li>
+                                <a href="/admin/plane/show">查看客机</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-note"></i><span
+                                class="sidebar-mini-hide">航班动态管理</span></a>
+                        <ul>
+                            <li>
+                                <a href="/admin/news/add">上传动态</a>
+                            </li>
+                            <li>
+                                <a href="/admin/fight/show">批量文件上传</a>
+                            </li>
+                            <li>
+                                <a href="/admin/news/show">查看动态</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-main-heading"><span class="sidebar-mini-hide">用户管理</span></li>
+                    <li>
+                        <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-wrench"></i><span
+                                class="sidebar-mini-hide">订阅用户</span></a>
+                        <ul>
+                            <li>
+                                <a href="base_comp_images.html">查看用户</a>
+                            </li>
+                            <li>
+                                <a href="base_comp_charts.html">分析信息</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-magic-wand"></i><span
+                                class="sidebar-mini-hide">浏览用户</span></a>
+                        <ul>
+                            <li>
+                                <a href="base_layouts_api.html">查看用户</a>
+                            </li>
+                            <li>
+                                <a href="base_layouts_default.html">分析信息</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-main-heading"><span class="sidebar-mini-hide">日志管理</span></li>
+                    <li>
+                        <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-layers"></i><span
+                                class="sidebar-mini-hide">数据库日志</span></a>
+                        <ul>
+                            <li>
+                                <a href="base_pages_blank.html">分析日志</a>
+                            </li>
+                            <li>
+                                <a href="base_pages_profile.html">User Profile</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-fire"></i><span
+                                class="sidebar-mini-hide">系统日志</span></a>
+                        <ul>
+                            <li>
+                                <a href="base_pages_400.html">错误报告</a>
+                            </li>
+                            <li>
+                                <a href="base_pages_401.html">401</a>
+                            </li>
+                            <li>
+                                <a href="base_pages_403.html">403</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-main-heading"><span class="sidebar-mini-hide">定时器管理</span></li>
+                    <li>
+                        <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-layers"></i><span
+                                class="sidebar-mini-hide">数据库定时器</span></a>
+                        <ul>
+                            <li>
+                                <a href="base_pages_blank.html">添加定时器</a>
+                            </li>
+                            <li>
+                                <a href="base_pages_profile.html">定时器管理</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a class="nav-submenu" data-toggle="nav-submenu" href="#"><i class="si si-fire"></i><span
+                                class="sidebar-mini-hide">信息定时器</span></a>
+                        <ul>
+                            <li>
+                                <a href="base_pages_400.html">添加定时器</a>
+                            </li>
+                            <li>
+                                <a href="base_pages_401.html">定时器管理</a>
+                            </li>
+                            <li>
+                                <a href="base_pages_403.html">403</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-main-heading"><span class="sidebar-mini-hide">其他</span></li>
+                    <li>
+                        <a href="frontend_home.html"><i class="si si-rocket"></i><span class="sidebar-mini-hide">Frontend</span></a>
+                    </li>
+                </ul>
+            </div>
+            <!-- END Side Content -->
+        </div>
+        <!-- Sidebar Content -->
+    </div>
+    <!-- END Sidebar Scroll Container -->
+</nav>
+<!-- END Sidebar -->
+</body>
+</html>

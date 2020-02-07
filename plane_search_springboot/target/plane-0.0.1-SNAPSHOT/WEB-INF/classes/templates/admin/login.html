@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>后台登录界面</title>
+    <link rel="stylesheet" id="css-main" href="/css/oneui.css">
+    <link rel="stylesheet" href="/css/style.css"/>
+</head>
+<body class="bg-image" style="background-image: url('/img/bg.png');">
+<!-- Coming Soon Content -->
+<div class="content pulldown bg-black-op overflow-hidden animated fadeIn">
+    <div class="row text-center push">
+        <div class="col-sm-8 col-sm-offset-2 col-lg-6 col-lg-offset-3">
+
+            <!-- Floating Labels -->
+            <div class="block" style="background: rgba(255, 255, 255, 0.8);">
+                <div class="block-header">
+                    <h2 class="h2">后台管理登录</h2>
+                </div>
+                <div class="block-content block-content-narrow">
+                    <form class="form-horizontal push-8-t" method="post" action="/admin/home">
+                        <div class="form-group">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <div class="form-material">
+                                    <input class="form-control" type="text" id="username" name="username"
+                                           placeholder="用户名">
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <div class="form-material">
+                                    <input class="form-control" type="password" id="password" name="password"
+                                           placeholder="密码">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-sm-8 col-sm-offset-2">
+                                <span class="btn search-btn" id="submit">登录</span>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- END Floating Labels -->
+
+        </div>
+    </div>
+</div>
+<!-- END Coming Soon Content -->
+
+
+<!-- 基础js应用 -->
+<script src="/js/jquery.min.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/jquery.scrollLock.min.js"></script>
+<script src="/js/jquery.appear.min.js"></script>
+<script src="/js/jquery.countTo.min.js"></script>
+<script src="/js/jquery.placeholder.min.js"></script>
+<script src="/js/js.cookie.min.js"></script>
+<script src="/js/app.js"></script>
+
+<!-- 引入js -->
+<script src="/plugins/jquery-validation/jquery.validate.min.js"></script>
+
+<script>
+    $(function () {
+        $('#submit').on('click', function () {
+            $('form').submit();
+        });
+        $('form').validate({
+            rules: {
+                username: {
+                    required: true
+                },
+                password: {
+                    required: true,
+                    remote: {
+                        url: '/admin/login',
+                        dataType: 'json',
+                        data: {
+                            username: function () {
+                                return $('#username').val();
+                            },
+                            password: function () {
+                                return $("#password").val()
+                            }
+                        }
+                    }
+                }
+            },
+            messages: {
+                username: {
+                    required: "请输入用户名"
+                },
+                password: {
+                    required: "请输入密码",
+                    remote: "用户名或密码不正确"
+                }
+            }
+        });
+    })
+</script>
+</body>
+</html>

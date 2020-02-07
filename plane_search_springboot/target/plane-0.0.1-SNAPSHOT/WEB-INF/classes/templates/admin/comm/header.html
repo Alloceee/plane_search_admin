@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!-- Header -->
+<header id="header-navbar" class="content-mini content-mini-full" th:fragment="header">
+    <!-- Header Navigation Right -->
+    <ul class="nav-header pull-right">
+        <li>
+            <div class="btn-group">
+                <button class="btn btn-default btn-image dropdown-toggle" data-toggle="dropdown" type="button">
+                    <img src="img/bg.png" alt="Avatar">
+                    <span class="caret"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-menu-right">
+                    <li class="dropdown-header">基本设置</li>
+                    <li>
+                        <a tabindex="-1" href="base_pages_inbox.html">
+                            <i class="si si-envelope-open pull-right"></i>首页
+                        </a>
+                    </li>
+                    <li>
+                        <a tabindex="-1" href="base_pages_profile.html">
+                            <i class="si si-user pull-right"></i>
+                            <span class="badge badge-success pull-right">1</span>个人中心
+                        </a>
+                    </li>
+                    <li>
+                        <a tabindex="-1" href="javascript:void(0)">
+                            <i class="si si-settings pull-right"></i>设置
+                        </a>
+                    </li>
+                    <li class="divider"></li>
+                    <li class="dropdown-header">账户设置</li>
+                    <li>
+                        <a tabindex="-1" href="base_pages_lock.html">
+                            <i class="si si-lock pull-right"></i>暂时离开
+                        </a>
+                    </li>
+                    <li>
+                        <a tabindex="-1" href="base_pages_login.html">
+                            <i class="si si-logout pull-right"></i>注销
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+    <!-- END Header Navigation Right -->
+
+    <!-- Header Navigation Left -->
+    <ul class="nav-header pull-left">
+
+        <li class="js-header-search header-search">
+            <form class="form-horizontal" action="base_pages_search.html" method="post">
+                <div class="form-material form-material-primary input-group remove-margin-t remove-margin-b">
+                    <input class="form-control" type="text" id="base-material-text" name="base-material-text" placeholder="输入航班信息搜索">
+                    <span class="input-group-addon"><i class="si si-magnifier"></i></span>
+                </div>
+            </form>
+        </li>
+    </ul>
+    <!-- END Header Navigation Left -->
+</header>
+</body>
+</html>
